@@ -34,6 +34,13 @@ namespace SQLiteNetPCL
 			}
 		}
 
+//		public IEnumerable<T> GetObjects<T> (string domain, string value) where T : IObject, new () 
+//		{
+//			lock (locker) {
+//				return (from i in database.Table<T>() where (i => i.LID == value) select i).ToList();
+//			}
+//		} 
+
 		public T GetObject<T> (int id) where T : IObject, new ()
 		{
 			lock (locker) {
